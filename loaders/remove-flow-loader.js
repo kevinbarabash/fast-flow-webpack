@@ -11,13 +11,15 @@ const schema = {
   },
 };
 
-const loader = function (source) {
+const loader = function (content, map, meta) {
   const options = getOptions(this);
 
   validateOptions(schema, options, "Example Loader");
 
-  const result = flowRemoveTypes(source, {});
-  return result.toString();
+  const result = flowRemoveTypes(content, {sourcemaps: true});
+
+  this.callback(null, result.toString(), result.generateMap(), meta);
+  return; 
 }
 
 module.exports = loader;

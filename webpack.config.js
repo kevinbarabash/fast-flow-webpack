@@ -1,7 +1,8 @@
 const path = require('path');
 
 module.exports = {
-  mode: 'development',
+  mode: 'production',
+  devtool: 'source-map',
   entry: './example/entry.js',
   output: {
     path: path.resolve(__dirname, 'dist'),

@@ -1,7 +1,7 @@
 // @flow
 import * as React from "react";
 
-let add = (x: number, y: number): number => {
+export const add = (x: number, y: number): number => {
   return x + y;
 };
 
@@ -20,3 +20,5 @@ class Foo extends React.Component<Props> {
     </div>;
   }
 }
+
+export default Foo;

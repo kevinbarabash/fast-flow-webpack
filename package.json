@@ -1,0 +1,15 @@
+{
+  "name": "fast-flow-webpack",
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "flow-remove-types": "^2.168.0"
+  },
+  "devDependencies": {
+    "esbuild-loader": "^2.17.0",
+    "react": "^17.0.2",
+    "webpack": "4.x",
+    "webpack-cli": "3.x"
+  }
+}

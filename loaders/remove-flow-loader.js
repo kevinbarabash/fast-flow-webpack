@@ -16,7 +16,8 @@ const loader = function (content, map, meta) {
 
   validateOptions(schema, options, "Example Loader");
 
-  const result = flowRemoveTypes(content, {sourcemaps: true});
+  // sourcemaps are only generate with `pretty: true`
+  const result = flowRemoveTypes(content, {pretty: true});
 
   this.callback(null, result.toString(), result.generateMap(), meta);
   return; 
